@@ -1,7 +1,18 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+This class provides a robust implementation for handling rational numbers, including:
+    Constructors for initialization.
+    Methods for getting the numerator and denominator.
+    Overridden equals and hashCode methods for proper equality checks and usage in collections.
+    Methods for comparing, adding, and subtracting rational numbers.
+    Utility methods for calculating the GCD and simplifying rational numbers.
  */
+
+
+
+
+
+
+
 package com.mycompany.rationaldesign;
 
 import java.util.Objects;

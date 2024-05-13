@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+The RationalNumberTest class is a unit test class for the RationalNumber class. It uses JUnit 5 for testing.
  */
 package com.mycompany;
 
@@ -41,6 +40,14 @@ public class RationalNumberTest {
         // Code to run after each test
     }
 */
+
+
+
+
+/*
+basic functionality:        This test checks if the addition of two RationalNumber instances is correct.
+*/
+    
         @BeforeEach
     public void setUp() {
         RationalNumber num1 = new RationalNumber(1, 2);       //  1/2
@@ -55,8 +62,9 @@ public class RationalNumberTest {
     
     
     
-    
-    
+/*
+basic functionality:        This test checks if the addition of two RationalNumber instances is correct.
+*/      
     @Test                                           //GOOD
     public void testAdd() {
         RationalNumber r1 = new RationalNumber(1, 2);  // Suppose 1/2
@@ -67,7 +75,7 @@ public class RationalNumberTest {
     }
     
     
-    @Test                                           //GOOD
+    @Test                                           //basic functionality:        GOOD
     public void pgcdTest(){
         int a=28;
         int b=91;
@@ -83,14 +91,14 @@ public class RationalNumberTest {
         int b=0;
         RationalNumber result= new RationalNumber(a,b);
     }*/
-  @Test                                           //GOOD
+  @Test                                           //Java exceptions:        GOOD
     public void testDenominatorZeroException() {
         int a = 28;
         int b = 0;
         assertThrows(IllegalArgumentException.class, () -> new RationalNumber(a, b));
     }
     
-    @Test                                           //GOOD
+    @Test                                           //Java exceptions:        GOOD
     public void testConstructorException() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             new RationalNumber(1, 0);
@@ -123,7 +131,7 @@ public class RationalNumberTest {
     // Additional test methods can be added here
     
     
-    @ParameterizedTest                                           //Nice
+    @ParameterizedTest                                           //parametrized unit tests:        Nice
     @MethodSource("additionProvider")
     public void testAdditionParametrized(RationalNumber a, RationalNumber b, RationalNumber expected) {
         RationalNumber result = RationalNumber.add(a, b);
